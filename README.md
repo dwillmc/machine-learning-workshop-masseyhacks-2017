@@ -166,7 +166,11 @@ Let's write some code:
 ```python
 import sklearn
 
-features = [(140, "smooth"), (130, "smooth"), (150, "bumpy"), (170, "bumpy")]
+features = [(140, "smooth"), 
+			(130, "smooth"), 
+			(150, "bumpy"), 
+			(170, "bumpy")]
+
 labels = ["apple", "apple", "orange", "orange"]
 ```
 
@@ -183,7 +187,11 @@ textureBumpy = 1
 labelApple = 0
 labelOrange = 1
 
-features = [(140, textureSmooth), (130, textureSmooth), (150, textureBumpy), (170, textureBumpy)]
+features = [(140, textureSmooth), 
+			(130, textureSmooth), 
+			(150, textureBumpy), 
+			(170, textureBumpy)]
+
 labels = [labelApple, labelApple, labelOrange, labelOrange]
 ```
 
@@ -223,8 +231,18 @@ Next we're going to create a `DecisionTreeClassifier`, and then train it with `f
 ```python
 from sklearn import tree
 
-features = [(140, "smooth"), (130, "smooth"), (150, "bumpy"), (170, "bumpy")]
-labels = ["apple", "apple", "orange", "orange"]
+textureSmooth = 0
+textureBumpy = 1
+
+labelApple = 0
+labelOrange = 1
+
+features = [(140, textureSmooth), 
+			(130, textureSmooth), 
+			(150, textureBumpy), 
+			(170, textureBumpy)]
+
+labels = [labelApple, labelApple, labelOrange, labelOrange]
 
 classifier = tree.DecisionTreeClassifier()
 classifier = classifier.fit(features, labels)
@@ -243,8 +261,18 @@ What would you predict that this is a description for an apple or an orange? Let
 ```python
 from sklearn import tree
 
-features = [(140, "smooth"), (130, "smooth"), (150, "bumpy"), (170, "bumpy")]
-labels = ["apple", "apple", "orange", "orange"]
+textureSmooth = 0
+textureBumpy = 1
+
+labelApple = 0
+labelOrange = 1
+
+features = [(140, textureSmooth), 
+			(130, textureSmooth), 
+			(150, textureBumpy), 
+			(170, textureBumpy)]
+
+labels = [labelApple, labelApple, labelOrange, labelOrange]
 
 classifier = tree.DecisionTreeClassifier()
 classifier = classifier.fit(features, labels)
