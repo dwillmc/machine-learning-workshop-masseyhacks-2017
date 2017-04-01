@@ -1,0 +1,15 @@
+from sklearn import tree
+
+smooth = 0
+bumpy = 1
+
+apple = 0
+orange = 1
+
+features = [(140, smooth), (130, smooth), (150, bumpy), (170, bumpy)]
+labels = [apple, apple, orange, orange]
+
+clf = tree.DecisionTreeClassifier()
+clf = clf.fit(features, labels)
+
+print clf.predict([(150, bumpy)])
