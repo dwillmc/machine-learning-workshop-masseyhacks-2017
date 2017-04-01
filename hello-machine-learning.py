@@ -1,4 +1,5 @@
 from sklearn import tree
+import pydotplus
 
 smooth = 0
 bumpy = 1
@@ -12,4 +13,4 @@ labels = [apple, apple, orange, orange]
 clf = tree.DecisionTreeClassifier()
 clf = clf.fit(features, labels)
 
-print clf.predict([(150, bumpy)])
+print clf.predict([(160, bumpy)])

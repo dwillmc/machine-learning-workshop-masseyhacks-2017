@@ -20,8 +20,9 @@
 	- [With Machine Learning](#with-machine-learning)
 		- [Supervised Learning Recipe](#supervised-learning-recipe)
 		- [Example Input Data](#example-input-data)
-			-[Features](#features)
+			- [Features](#features)
 		- [Decision Trees](#decision-trees)
+- [Visualizing the Decision Tree](#visualizing-the-decision-tree)
 
 
 ## Setup 
@@ -236,3 +237,22 @@ Let's say that we gave our classifier this description:
 ```python
 (160, textureBumpy)
 ```
+
+What would you predict that this is a description for an apple or an orange? Let's plug it into the classifier and see what it says.
+
+```python
+from sklearn import tree
+
+features = [(140, "smooth"), (130, "smooth"), (150, "bumpy"), (170, "bumpy")]
+labels = ["apple", "apple", "orange", "orange"]
+
+classifier = tree.DecisionTreeClassifier()
+classifier = classifier.fit(features, labels)
+
+print(classifier.predict([(160, textureBumpy)]))
+```
+
+Now you can run the program, and you'll see either `[0]` or `[1]` printed, which matches `labelApple` or `labelOrange`.
+
+Try some different descriptions and try adding some more example data and see how the output changes.
+
