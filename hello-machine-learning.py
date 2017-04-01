@@ -1,16 +1,15 @@
 from sklearn import tree
-import pydotplus
 
-smooth = 0
-bumpy = 1
+textureSmooth = 0
+textureBumpy = 1
 
-apple = 0
-orange = 1
+labelApple = 0
+labelOrange = 1
 
-features = [(140, smooth), (130, smooth), (150, bumpy), (170, bumpy)]
-labels = [apple, apple, orange, orange]
+features = [(140, textureSmooth), (130, textureSmooth), (150, textureBumpy), (170, textureBumpy)]
+labels = [labelApple, labelApple, labelOrange, labelOrange]
 
-clf = tree.DecisionTreeClassifier()
-clf = clf.fit(features, labels)
+classifier = tree.DecisionTreeClassifier()
+classifier = classifier.fit(features, labels)
 
-print clf.predict([(160, bumpy)])
+print classifier.predict([(160, textureBumpy)])
