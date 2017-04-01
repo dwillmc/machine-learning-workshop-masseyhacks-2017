@@ -268,9 +268,9 @@ labelApple = 0
 labelOrange = 1
 
 features = [(140, textureSmooth), 
-	(130, textureSmooth), 
-	(150, textureBumpy), 
-	(170, textureBumpy)]
+		(130, textureSmooth), 
+		(150, textureBumpy), 
+		(170, textureBumpy)]
 
 labels = [labelApple, labelApple, labelOrange, labelOrange]
 
