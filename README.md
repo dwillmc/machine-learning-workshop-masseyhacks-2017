@@ -167,9 +167,9 @@ Let's write some code:
 import sklearn
 
 features = [(140, "smooth"), 
-			(130, "smooth"), 
-			(150, "bumpy"), 
-			(170, "bumpy")]
+		(130, "smooth"), 
+		(150, "bumpy"), 
+		(170, "bumpy")]
 
 labels = ["apple", "apple", "orange", "orange"]
 ```
@@ -188,9 +188,9 @@ labelApple = 0
 labelOrange = 1
 
 features = [(140, textureSmooth), 
-			(130, textureSmooth), 
-			(150, textureBumpy), 
-			(170, textureBumpy)]
+		(130, textureSmooth), 
+		(150, textureBumpy), 
+		(170, textureBumpy)]
 
 labels = [labelApple, labelApple, labelOrange, labelOrange]
 ```
@@ -238,9 +238,9 @@ labelApple = 0
 labelOrange = 1
 
 features = [(140, textureSmooth), 
-			(130, textureSmooth), 
-			(150, textureBumpy), 
-			(170, textureBumpy)]
+		(130, textureSmooth), 
+		(150, textureBumpy), 
+		(170, textureBumpy)]
 
 labels = [labelApple, labelApple, labelOrange, labelOrange]
 
